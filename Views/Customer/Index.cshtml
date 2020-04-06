@@ -1,0 +1,41 @@
+﻿@using System.Web.UI.WebControls
+@model Vidly.ViewModel.CustomerViewModel
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>@ViewBag.Title</h1>
+
+
+
+
+@if (!Model.Custumer.Any())
+{
+    <p>We don't have any customers yet.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td><b>Customer</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model.Custumer)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(customer.Name, "Details", "Customer", new
+                        {
+                            id = customer.Id
+                        }, null)
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+}
+
+
