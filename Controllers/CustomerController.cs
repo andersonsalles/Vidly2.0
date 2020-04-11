@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -45,7 +46,7 @@ namespace Vidly.Controllers
         public ActionResult Details(int id)
         {
             if (id <= 0) throw new ArgumentOutOfRangeException(nameof(id));
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.Include(x => x.MembershipType).SingleOrDefault(c => c.Id == id);
 
             return View(customer);
         }
