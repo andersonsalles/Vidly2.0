@@ -5,3 +5,12 @@
 <h1>@ViewBag.Title</h1>
 
 <h2>@Model.Name</h2>
+<ul>
+    <li>Membership Type: @Model.MembershipTypeId</li>
+    @if (@Model.BirthDate != null)
+    {
+        var x = (DateTime) Model.BirthDate;
+        <li>Birthdate:  @x.ToShortDateString()</li>
+    }
+
+</ul>

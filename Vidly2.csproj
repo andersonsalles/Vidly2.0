@@ -207,6 +207,10 @@
     <Compile Include="Migrations\202004112016033_addDateTime.Designer.cs">
       <DependentUpon>202004112016033_addDateTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004112129085_dateCanBeNull.cs" />
+    <Compile Include="Migrations\202004112129085_dateCanBeNull.Designer.cs">
+      <DependentUpon>202004112129085_dateCanBeNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -323,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004112016033_addDateTime.resx">
       <DependentUpon>202004112016033_addDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004112129085_dateCanBeNull.resx">
+      <DependentUpon>202004112129085_dateCanBeNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
