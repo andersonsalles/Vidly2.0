@@ -175,11 +175,44 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004062255229_InitialModel.cs" />
+    <Compile Include="Migrations\202004062255229_InitialModel.Designer.cs">
+      <DependentUpon>202004062255229_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004062310583_AddIsSubscribedCustomer.cs" />
+    <Compile Include="Migrations\202004062310583_AddIsSubscribedCustomer.Designer.cs">
+      <DependentUpon>202004062310583_AddIsSubscribedCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004062318176_AddMembershipType.cs" />
+    <Compile Include="Migrations\202004062318176_AddMembershipType.Designer.cs">
+      <DependentUpon>202004062318176_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004062321567_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202004062321567_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>202004062321567_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004062330257_AddNameOnMembershipType.cs" />
+    <Compile Include="Migrations\202004062330257_AddNameOnMembershipType.Designer.cs">
+      <DependentUpon>202004062330257_AddNameOnMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004062331519_UpdateNamesOnMembershipType.cs" />
+    <Compile Include="Migrations\202004062331519_UpdateNamesOnMembershipType.Designer.cs">
+      <DependentUpon>202004062331519_UpdateNamesOnMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004070000300_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\202004070000300_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>202004070000300_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004112016033_addDateTime.cs" />
+    <Compile Include="Migrations\202004112016033_addDateTime.Designer.cs">
+      <DependentUpon>202004112016033_addDateTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -265,6 +298,32 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004062255229_InitialModel.resx">
+      <DependentUpon>202004062255229_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004062310583_AddIsSubscribedCustomer.resx">
+      <DependentUpon>202004062310583_AddIsSubscribedCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004062318176_AddMembershipType.resx">
+      <DependentUpon>202004062318176_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004062321567_PopulateMembershipTypes.resx">
+      <DependentUpon>202004062321567_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004062330257_AddNameOnMembershipType.resx">
+      <DependentUpon>202004062330257_AddNameOnMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004062331519_UpdateNamesOnMembershipType.resx">
+      <DependentUpon>202004062331519_UpdateNamesOnMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004070000300_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>202004070000300_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004112016033_addDateTime.resx">
+      <DependentUpon>202004112016033_addDateTime.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
