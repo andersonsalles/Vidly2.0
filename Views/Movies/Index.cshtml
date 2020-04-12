@@ -8,17 +8,27 @@
 
 <table class="table table-bordered table-hover">
     <thead>
-    <tr>
-        <td><b>Movies</b></td>
-    </tr>
+        <tr>
+            <td>
+                <b>Movies</b>
+            </td>
+            <td><b>Genres</b></td>
+        </tr>
     </thead>
     <tbody>
-    @foreach (var movie in Model.Movies)
-    {
-        <tr>
-            <td>@movie.Name</td>
-        </tr>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(movie.Name, "Details", "Movies", new
+                    {
+                        id = movie.Id
+                    }, null)
+                </td>
 
-    }
+                <td>@movie.Genre.Name</td>
+            </tr>
+
+        }
     </tbody>
 </table>

@@ -211,9 +211,78 @@
     <Compile Include="Migrations\202004112129085_dateCanBeNull.Designer.cs">
       <DependentUpon>202004112129085_dateCanBeNull.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004122006370_AddMovieTable.cs" />
+    <Compile Include="Migrations\202004122006370_AddMovieTable.Designer.cs">
+      <DependentUpon>202004122006370_AddMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122012334_addGenreTable.cs" />
+    <Compile Include="Migrations\202004122012334_addGenreTable.Designer.cs">
+      <DependentUpon>202004122012334_addGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122014140_populateGenreTable.cs" />
+    <Compile Include="Migrations\202004122014140_populateGenreTable.Designer.cs">
+      <DependentUpon>202004122014140_populateGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122035220_testeIdInt.cs" />
+    <Compile Include="Migrations\202004122035220_testeIdInt.Designer.cs">
+      <DependentUpon>202004122035220_testeIdInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122037317_GengeKeyIntOtoByte.cs" />
+    <Compile Include="Migrations\202004122037317_GengeKeyIntOtoByte.Designer.cs">
+      <DependentUpon>202004122037317_GengeKeyIntOtoByte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122038270_TryPopulateGenre.cs" />
+    <Compile Include="Migrations\202004122038270_TryPopulateGenre.Designer.cs">
+      <DependentUpon>202004122038270_TryPopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122044142_PutOthersValuesOnGenresTable.cs" />
+    <Compile Include="Migrations\202004122044142_PutOthersValuesOnGenresTable.Designer.cs">
+      <DependentUpon>202004122044142_PutOthersValuesOnGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122050259_UpdateMovieColums.cs" />
+    <Compile Include="Migrations\202004122050259_UpdateMovieColums.Designer.cs">
+      <DependentUpon>202004122050259_UpdateMovieColums.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122134409_test.cs" />
+    <Compile Include="Migrations\202004122134409_test.Designer.cs">
+      <DependentUpon>202004122134409_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122137535_test2.cs" />
+    <Compile Include="Migrations\202004122137535_test2.Designer.cs">
+      <DependentUpon>202004122137535_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122143530_test3.cs" />
+    <Compile Include="Migrations\202004122143530_test3.Designer.cs">
+      <DependentUpon>202004122143530_test3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122150061_test4.cs" />
+    <Compile Include="Migrations\202004122150061_test4.Designer.cs">
+      <DependentUpon>202004122150061_test4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122151210_test5.cs" />
+    <Compile Include="Migrations\202004122151210_test5.Designer.cs">
+      <DependentUpon>202004122151210_test5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122156363_test6.cs" />
+    <Compile Include="Migrations\202004122156363_test6.Designer.cs">
+      <DependentUpon>202004122156363_test6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122157498_test7.cs" />
+    <Compile Include="Migrations\202004122157498_test7.Designer.cs">
+      <DependentUpon>202004122157498_test7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122158207_test8.cs" />
+    <Compile Include="Migrations\202004122158207_test8.Designer.cs">
+      <DependentUpon>202004122158207_test8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004122206092_PopulateGenreAgain.cs" />
+    <Compile Include="Migrations\202004122206092_PopulateGenreAgain.Designer.cs">
+      <DependentUpon>202004122206092_PopulateGenreAgain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -286,6 +355,7 @@
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,6 +400,57 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004112129085_dateCanBeNull.resx">
       <DependentUpon>202004112129085_dateCanBeNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122006370_AddMovieTable.resx">
+      <DependentUpon>202004122006370_AddMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122012334_addGenreTable.resx">
+      <DependentUpon>202004122012334_addGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122014140_populateGenreTable.resx">
+      <DependentUpon>202004122014140_populateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122035220_testeIdInt.resx">
+      <DependentUpon>202004122035220_testeIdInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122037317_GengeKeyIntOtoByte.resx">
+      <DependentUpon>202004122037317_GengeKeyIntOtoByte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122038270_TryPopulateGenre.resx">
+      <DependentUpon>202004122038270_TryPopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122044142_PutOthersValuesOnGenresTable.resx">
+      <DependentUpon>202004122044142_PutOthersValuesOnGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122050259_UpdateMovieColums.resx">
+      <DependentUpon>202004122050259_UpdateMovieColums.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122134409_test.resx">
+      <DependentUpon>202004122134409_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122137535_test2.resx">
+      <DependentUpon>202004122137535_test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122143530_test3.resx">
+      <DependentUpon>202004122143530_test3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122150061_test4.resx">
+      <DependentUpon>202004122150061_test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122151210_test5.resx">
+      <DependentUpon>202004122151210_test5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122156363_test6.resx">
+      <DependentUpon>202004122156363_test6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122157498_test7.resx">
+      <DependentUpon>202004122157498_test7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122158207_test8.resx">
+      <DependentUpon>202004122158207_test8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004122206092_PopulateGenreAgain.resx">
+      <DependentUpon>202004122206092_PopulateGenreAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
