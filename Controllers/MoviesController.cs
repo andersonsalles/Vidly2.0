@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModel;
 using WebApplication1.Models;
+using WebApplication1.ViewModel;
 
 namespace Vidly.Controllers
 {
@@ -74,6 +75,15 @@ namespace Vidly.Controllers
         {
             return Content(year + "/" + month);
         }
-        
+
+        public ActionResult New()
+        {
+            var genres = _dbContext.Genres.ToList();
+            var viewModel = new AddMovieViewModel()
+            {
+                Genres = genres
+            };
+            return View("MovieForm", viewModel);
+        }
     }
 }
