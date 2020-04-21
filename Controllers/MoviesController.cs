@@ -46,12 +46,6 @@ namespace Vidly.Controllers
 
         public ActionResult Index()
         {
-            //var movies = new List<Movie>()
-            //{
-            //    new Movie(){Id = 1, Name = "Movie 1"},
-            //    new Movie(){Id = 2, Name = "Movie 2"}
-            //
-            //};
 
             var movies = _dbContext.Movies.Include(x => x.Genre).ToList();
             MovieViewModel viewModel = new MovieViewModel()
@@ -84,6 +78,14 @@ namespace Vidly.Controllers
                 Genres = genres
             };
             return View("MovieForm", viewModel);
+        }
+
+        public ActionResult Save(Movie movie)
+        {
+            movie.DateAdded = DateTime.Now;
+            _dbContext.Movies.Add(movie);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index","Movies");
         }
     }
 }
