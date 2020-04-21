@@ -40,7 +40,7 @@ namespace Vidly.Controllers
             {
                 MembershipTypes = membershipTypes
             };
-            return View(viewModel);
+            return View("CustomerForm", viewModel);
         }   
 
         // GET: Customer
@@ -68,6 +68,22 @@ namespace Vidly.Controllers
             var customer = _context.Customers.Include(x => x.MembershipType).SingleOrDefault(c => c.Id == id);
 
             return View(customer);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewModel = new AddCustomerViewModel()
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+            return View("CustomerForm", viewModel);
         }
     }
 }
