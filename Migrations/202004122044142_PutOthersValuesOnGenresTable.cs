@@ -7,7 +7,7 @@ namespace WebApplication1.Migrations
     {
         public override void Up()
         {
-            Sql("INSERT INTO Genres (Name) VALUES ('Action')");
+            Sql("INSERT INTO Genres (Name) VALUES ('Save')");
             Sql("INSERT INTO Genres (Name) VALUES ('Family')");
             Sql("INSERT INTO Genres (Name) VALUES ('Romance')");
         }
