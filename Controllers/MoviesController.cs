@@ -14,6 +14,7 @@ namespace Vidly.Controllers
     public class MoviesController : Controller
     {
         private ApplicationDbContext _dbContext;
+        
 
         public MoviesController()
         {
@@ -48,6 +49,7 @@ namespace Vidly.Controllers
         {
 
             var movies = _dbContext.Movies.Include(x => x.Genre).ToList();
+
             MovieViewModel viewModel = new MovieViewModel()
             {
                 Movies = movies
@@ -72,20 +74,54 @@ namespace Vidly.Controllers
 
         public ActionResult New()
         {
+
             var genres = _dbContext.Genres.ToList();
             var viewModel = new AddMovieViewModel()
             {
-                Genres = genres
+                Genres = genres,
+                PageName = "New Movie"
             };
             return View("MovieForm", viewModel);
         }
 
         public ActionResult Save(Movie movie)
         {
-            movie.DateAdded = DateTime.Now;
-            _dbContext.Movies.Add(movie);
+            if (movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
+                _dbContext.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _dbContext.Movies.Single(m => m.Id == movie.Id);
+                movieInDb.Name = movie.Name;
+                movieInDb.NumberInStock = movie.NumberInStock;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+            }
+            
+
+            
             _dbContext.SaveChanges();
             return RedirectToAction("Index","Movies");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movieInDb = _dbContext.Movies.SingleOrDefault(m => m.Id == id);
+            if (movieInDb == null)
+            {
+                return HttpNotFound();
+            }
+
+            var genres = _dbContext.Genres.ToList();
+            var viewModel = new AddMovieViewModel()
+            {
+                Movie = movieInDb,
+                Genres = genres,
+                PageName = "Edit Movie"
+            };
+            return View("MovieForm", viewModel);
         }
     }
 }
